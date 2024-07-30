@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS Orders;
-CREATE TABLE Orders(id INT PRIMARY KEY, type VARCHAR(255), price INT, quantity INT);
-INSERT INTO Orders VALUES(1, 'Buy', 10, 5);
-INSERT INTO Orders VALUES(2, 'Sell', 15, 2);
+DROP TABLE IF EXISTS "Orders";
+CREATE TABLE "Orders"(id INT PRIMARY KEY, type VARCHAR(255), price INT, quantity INT);
+INSERT INTO "Orders" VALUES(1, 'Buy', 10, 5);
+INSERT INTO "Orders" VALUES(2, 'Sell', 15, 2);
 
 DROP TABLE IF EXISTS Clients;
 CREATE TABLE Clients(id INT PRIMARY KEY, name VARCHAR(255), acctNo INT, balance INT);

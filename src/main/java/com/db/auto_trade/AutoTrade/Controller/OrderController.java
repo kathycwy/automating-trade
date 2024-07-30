@@ -1,6 +1,6 @@
 package com.db.auto_trade.AutoTrade.Controller;
 
-import com.db.auto_trade.AutoTrade.Model.Order;
+import com.db.auto_trade.AutoTrade.entity.Orders;
 import com.db.auto_trade.AutoTrade.Service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,17 +15,17 @@ public class OrderController {
 
 
     @PostMapping
-    public Order newOrder(@RequestBody Order order) {
-        return orderService.createOrder(order);
+    public Orders newOrder(@RequestBody Orders orders) {
+        return orderService.createOrder(orders);
     }
 
     @GetMapping
-    public Iterable<Order> getAllOrders() {
+    public Iterable<Orders> getAllOrders() {
         return orderService.getAllOrders();
     }
 
     @GetMapping("/{id}")
-    public Order getOrderById(@PathVariable Long id) {
+    public Orders getOrderById(@PathVariable Long id) {
         return orderService.getOrderById(id).orElseThrow(() -> new RuntimeException("Order was not found."));
     }
 

@@ -3,7 +3,7 @@ package com.db.auto_trade.AutoTrade.entity;
 import jakarta.persistence.*;
 
 @Entity
-public class Order {
+public class Orders {
 
     @Id
     private int id;
@@ -18,7 +18,11 @@ public class Order {
 
     private int quantity;
 
-    public Order(int id, String type, String asset, String market, int price, int quantity) {
+    public Orders () {
+
+    }
+
+    public Orders(int id, String type, String asset, String market, int price, int quantity) {
         this.id = id;
         this.type = type;
         this.asset = asset;
